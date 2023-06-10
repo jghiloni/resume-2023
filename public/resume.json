@@ -1,0 +1,349 @@
+{
+  "$schema": "./schema/resume.schema.json",
+  "name": "Josh Ghiloni",
+  "phone": "3035905427",
+  "email": "ghiloni@gmail.com",
+  "linkedin": "https://www.linkedin.com/in/joshghiloni/",
+  "github": "https://github.com/gideaworx",
+  "sections": [
+    {
+      "name": "Objective",
+      "items": [
+        {
+          "body": {
+            "variant": "paragraph",
+            "text": "I strive to use my 25+ years of professional experience in software engineering to create solutions that delight my stakeholders, mentor the next generation of technologist professionals, lead teams in an effective way, and learn from my mistakes and my colleagues."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Experience",
+      "items": [
+        {
+          "header": [
+            "Principal Software Engineer",
+            {
+              "href": "https://realtor.com",
+              "text": "realtor.com"
+            },
+            "2022 - Present"
+          ],
+          "body": {
+            "variant": "list",
+            "text": [
+              "Introduced uptime monitoring for various sections of the site, first through Uptrends, then through New Relic",
+              "Prepared executive-level quarterly reports, cross-referencing uptime percentages with user-impacting incidents",
+              "Assisted a team from a recent acquisition in migrating their site onto realtor.com infrastructure. This included writing a super-low-latency router, redirecting approximately 30,000 URLs to the new format in sub-20ms time using AWS CloudFront and DynamoDB",
+              "As teams migrated from Jenkins-based CI/CD and native AWS-based infrastructure to cloud-native CI/CD with CircleCI and ArgoCD and Kubernetes-based infrastructure, I assisted many teams, including my own, with the transition, using my extensive experience with Kubernetes and CI/CD solutions",
+              "Migrated many internal tools from bespoke, tightly coupled interfaces to more generic, cloud-native solutions",
+              "Mentored my team of young engineers on cloud-native and enterprise software patterns, as well as how to navigate the internal politics of a medium-sized enterprise which was, for most of them, their first full-time job"
+            ]
+          }
+        },
+        {
+          "header": [
+            "Founder and Sole Proprietor",
+            "Ghiloni Ideaworx",
+            "2022 - Present"
+          ],
+          "body": {
+            "variant": "paragraph",
+            "text": [
+              "Ghiloni Ideaworx is an umbrella organization for my various independent endeavors, focused on open source software, independent software consulting, and custom woodworking commissions. View my open-source portfolio",
+              {
+                "href": "https://github.com/gideaworx",
+                "text": "here."
+              }
+            ]
+          }
+        },
+        {
+          "header": [
+            "Staff Solutions Architect",
+            "VMware Tanzu Labs (formerly Pivotal Labs)",
+            "2017 - 2022"
+          ],
+          "body": {
+            "variant": "list",
+            "text": [
+              "Led and participated in post-sales professional services engagements for the VMware Tanzu product line (formerly known as Pivotal Cloud Foundry). These engagements included product education, implementing automated infrastructure deployment, building structured product backlogs, and driving cultural transformation around building balanced product teams, implementing a culture of test-driven development, and other needs as deemed necessary per situation",
+              "Developed tools to help Solutions Architects migrate the contents of one Tanzu Application Service installation to another",
+              "Led an internal SRE team for a pilot managed service offering for a customer, with automation and observability refined to a degree to which we received no incident pages in the final 18 months of my involvement"
+            ]
+          }
+        },
+        {
+          "header": [
+            "Principal Consultant",
+            "ECS Team (now part of CGI)",
+            "2012 - 2017"
+          ],
+          "body": {
+            "variant": "list",
+            "text": [
+              "Member of a boutique consulting firm based in Denver, CO, acquired by CGI in 2017",
+              "Lead technical architect for Connect for Health Colorado, Colorado's implementation of the Affordable Care Act's Healthcare Exchange. We had the distinction of being the only state whose exchange did not crash on day 1. Developed highly available infrastructure based on Oracle's SOA Stack, and custom solutions to provide EDI transfer between the exchange and insurance providers, from 2012 - 2014",
+              "Acted as an Enterprise Architect with DigitalGlobe (now Maxar), helping modernize their software stack powering the ground systems for their WorldView 4 satellite. Implemented a polyglot app-to-app authentication and authorization system using OAuth 2 for apps deployed to Cloud Foundry (both open source and Pivotal-branded variants)",
+              "Participated in Pivotal Cloud Foundry Solutions engagements as a Pivotal Ready Partner (see above for an in-depth description)"
+            ]
+          }
+        },
+        {
+          "header": ["Advisory Software Engineer", "IBM", "2003 - 2012"],
+          "body": {
+            "variant": "list",
+            "text": [
+              "QA and Development for IBM Portal Personalization and IBM WebSphere Portal Document Manager",
+              "Integrated Lotus Quickr with IBM's Enterprise Content Management Portfolio",
+              "Implemented multi-tenancy for IBM SmartCloud / IBM Connections"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Programming Languages",
+      "items": [
+        {
+          "body": [
+            {
+              "name": "Go",
+              "first_used": 2015,
+              "last_used": 9999,
+              "experience": "Expert"
+            },
+            {
+              "name": "Node.js (Javascript and Typescript)",
+              "first_used": 2017,
+              "last_used": 9999,
+              "experience": "Expert"
+            },
+            {
+              "name": "Java",
+              "first_used": 2003,
+              "last_used": 9999,
+              "experience": "Advanced"
+            },
+            {
+              "name": "Bash",
+              "first_used": 1999,
+              "last_used": 9999,
+              "experience": "Expert"
+            },
+            {
+              "name": "Python",
+              "first_used": 2002,
+              "last_used": 9999,
+              "experience": "Intermediate"
+            },
+            {
+              "name": "C++",
+              "first_used": 1999,
+              "last_used": 2010,
+              "experience": "Out of Practice"
+            },
+            {
+              "name": ".Net",
+              "first_used": 2001,
+              "last_used": 2014,
+              "experience": "Out of Practice"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Application Frameworks",
+      "items": [
+        {
+          "body": [
+            {
+              "name": "Helm",
+              "first_used": 2019,
+              "last_used": 9999,
+              "experience": "Advanced"
+            },
+            {
+              "name": "React.js",
+              "first_used": 2018,
+              "last_used": 9999,
+              "experience": "Advanced"
+            },
+            {
+              "name": "Spring Boot",
+              "first_used": 2014,
+              "last_used": 9999,
+              "experience": "Advanced"
+            },
+            {
+              "name": "Flask",
+              "first_used": 2022,
+              "last_used": 9999,
+              "experience": "Beginner"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "CI/CD Frameworks",
+      "items": [
+        {
+          "body": [
+            {
+              "name": "CircleCI",
+              "first_used": 2021,
+              "last_used": 9999,
+              "experience": "Advanced"
+            },
+            {
+              "name": "ArgoCD",
+              "first_used": 2021,
+              "last_used": 9999,
+              "experience": "Intermediate"
+            },
+            {
+              "name": "Concourse CI",
+              "first_used": 2015,
+              "last_used": 9999,
+              "experience": "Expert"
+            },
+            {
+              "name": "Github Actions",
+              "first_used": 2021,
+              "last_used": 9999,
+              "experience": "Intermediate"
+            },
+            {
+              "name": "Jenkins",
+              "first_used": 2001,
+              "last_used": 2022,
+              "experience": "Intermediate"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Observability Tools",
+      "items": [
+        {
+          "body": [
+            {
+              "name": "Prometheus",
+              "first_used": 2018,
+              "last_used": 2022,
+              "experience": "Advanced"
+            },
+            {
+              "name": "Grafana",
+              "first_used": 2017,
+              "last_used": 9999,
+              "experience": "Intermediate"
+            },
+            {
+              "name": "InfluxDB",
+              "first_used": 2017,
+              "last_used": 9999,
+              "experience": "Advanced"
+            },
+            {
+              "name": "Tanzu Observability by Wavefront",
+              "first_used": 2020,
+              "last_used": 2022,
+              "experience": "Intermediate"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Certifications",
+      "items": [
+        {
+          "body": {
+            "variant": "lines",
+            "text": [
+              "Certified Kubernetes Administrator",
+              "Certification Number CKA-2000-007976-0100",
+              "Earned May 2020"
+            ]
+          }
+        },
+        {
+          "body": {
+            "variant": "lines",
+            "text": [
+              "Certified Kubernetes Application Developer",
+              "Certification Number CKAD-2000-003980-0100",
+              "Earned May 2020"
+            ]
+          }
+        },
+        {
+          "body": {
+            "variant": "lines",
+            "text": [
+              "Certified Kubernetes Security Specialist",
+              "Certification Number LF-2qktgivcfa",
+              "Earned July 2021"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Selected Speaking",
+      "items": [
+        {
+          "body": {
+            "variant": "lines",
+            "text": [
+              "April 2022",
+              "Internal realtor.com technical conference - Techcelerate",
+              "On the Benefits of Building and Maintaining a Balanced Product Team"
+            ]
+          }
+        },
+        {
+          "body": {
+            "variant": "lines",
+            "text": [
+              "April 2019",
+              "Cloud Foundry Summit - North America",
+              {
+                "href": "https://youtu.be/ydswsuidHn4",
+                "text": "Cracks in the Foundation"
+              }
+            ]
+          }
+        },
+        {
+          "body": {
+            "variant": "lines",
+            "text": [
+              "June 2017",
+              "Cloud Foundry Summit - North America",
+              {
+                "href": "https://youtu.be/dmUSqX0ELGc",
+                "text": "Using BOSH Addons to Customize your CF Experience"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "References",
+      "items": [
+        {
+          "body": {
+            "variant": "paragraph",
+            "text": "Available upon request"
+          }
+        }
+      ]
+    }
+  ]
+}

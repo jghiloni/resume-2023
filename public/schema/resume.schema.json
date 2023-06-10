@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "resume.schema.json",
+  "title": "Resume",
+  "description": "My resumé schema. There are many resumés like it, but this one is mine",
+  "type": "object",
+  "properties": {
+    "name": { "type": "string" },
+    "phone": { "type": "string", "pattern": "^[1-9][0-9]{9}$" },
+    "email": { "type": "string" },
+    "linkedin": { "type": "string" },
+    "github": { "type": "string" },
+    "sections": { "type": "array", "items": { "$ref": "#/$defs/section" } }
+  },
+  "$defs": {
+    "link": {
+      "type": "object",
+      "properties": {
+        "href": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        }
+      }
+    },
+    "line": {
+      "oneOf": [
+        { "type": "string" },
+        {
+          "type": "array",
+          "items": {
+            "contains": {
+              "allOf": [{ "type": "string" }, { "$ref": "#/$defs/link" }]
+            }
+          }
+        }
+      ]
+    },
+    "text": {
+      "type": "object",
+      "properties": {
+        "variant": {
+          "enum": ["paragraph", "lines", "list"]
+        },
+        "text": {
+          "anyOf": [
+            { "$ref": "#/$defs/line" },
+            { "type": "array", "items": { "$ref": "#/$defs/line" } }
+          ]
+        }
+      }
+    },
+    "section": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "items": { "type": "array", "items": { "$ref": "#/$defs/sectionitem" } }
+      }
+    },
+    "sectionitem": {
+      "type": "object",
+      "properties": {
+        "header": {
+          "type": "array",
+          "items": {
+            "contains": {
+              "anyOf": [{ "type": "string" }, { "$ref": "#/$defs/link" }]
+            }
+          }
+        },
+        "body": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/text"
+            },
+            {
+              "type": "array",
+              "items": { "$ref": "#/$defs/skill" }
+            }
+          ]
+        },
+        "required": ["body"]
+      }
+    },
+    "skill": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "first_used": { "type": "integer", "minimum": 1997 },
+        "last_used": { "type": "integer", "minimum": 1997 },
+        "experience": {
+          "enum": [
+            "Beginner",
+            "Intermediate",
+            "Advanced",
+            "Expert",
+            "Out of Practice"
+          ]
+        }
+      }
+    }
+  }
+}
