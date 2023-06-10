@@ -35,10 +35,12 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: "lts/*"
+          cache: "yarn"
+          cache-dependency-path: "yarn.lock"
       - name: Install Dependencies
-        run: .yarn/releases/yarn-3.6.0.cjs install
+        run: yarn install
       - name: Build Website
-        run: .yarn/releases/yarn-3.6.0.cjs build
+        run: yarn build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
