@@ -37,6 +37,7 @@ export function Header() {
       variant="text" sx={sx}
       href={`tel:+1${data.phone}`}
       target="_blank"
+      color="primary"
       startIcon={<PermPhoneMsgRoundedIcon />}
     >
       ({data.phone?.substring(0, 3)}) {data.phone?.substring(3, 6)}-
@@ -49,6 +50,7 @@ export function Header() {
       variant="text" sx={sx}
       href={`mailto:${data.email}`}
       target="_blank"
+      color="primary"
       startIcon={<AlternateEmailRoundedIcon />}
     >
       {data.email}
@@ -60,6 +62,7 @@ export function Header() {
       variant="text" sx={sx}
       href={data.linkedin ?? "https://linkedin.com"}
       target="_blank"
+      color="primary"
       startIcon={<LinkedIn />}
     >
       LinkedIn
@@ -71,6 +74,7 @@ export function Header() {
       variant="text" sx={sx}
       href={data.github ?? "https://github.com"}
       target="_blank"
+      color="primary"
       startIcon={<GitHub />}
     >
       Github
@@ -124,8 +128,8 @@ export function Header() {
                 ))}
               </Menu>
             </Box>
-            <DescriptionRoundedIcon fontSize="large" />
-            <Typography variant="h5" ml="12px" mr="36px" noWrap>Josh Ghiloni, Principal Software Engineer</Typography>
+            <DescriptionRoundedIcon fontSize="large" htmlColor="white" />
+            <Typography variant="h5" ml="12px" mr="36px" color="white" noWrap>Josh Ghiloni, Principal Software Engineer</Typography>
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               {contactLinks.map(({ link }) => link({ my: 2, color: 'white' }))}
             </Box>

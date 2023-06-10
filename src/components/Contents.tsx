@@ -22,7 +22,7 @@ export function ResumeContents() {
 
   return (
     <Box sx={{width: "100%"}}>
-      <Box sx={{borderBottom: 1, borderColor: "divider"}}>
+      <Box sx={{borderBottom: 1, borderColor: "divider", padding: "0 50px"}}>
         <Tabs value={tabIndex} onChange={handleTabChange} aria-label="Sections">
           {
             data.sections?.map((section, index) => (

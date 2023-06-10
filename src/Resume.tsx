@@ -1,10 +1,10 @@
 import { Backdrop, CircularProgress } from "@mui/material";
 import { useEffect, useState } from "react";
+import { ResumeContents } from "./components/Contents";
+import { ResumeProvider } from "./components/Contexts";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { ResumeData } from "./utils/models";
-import { ResumeProvider } from "./components/Contexts";
-import { ResumeContents } from "./components/Contents";
 
 export function Resume() {
   const [resumeData, setResumeData] = useState<ResumeData>({});

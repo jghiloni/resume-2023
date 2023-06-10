@@ -52,7 +52,7 @@ export function Section(props: {
             </Paper>
           );
         }
-        console.log(item);
+
         if (item.body) {
           if ("variant" in item.body) {
             nodes.push(RenderText(item.body));

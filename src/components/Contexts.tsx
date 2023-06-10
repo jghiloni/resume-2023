@@ -3,6 +3,7 @@ import Brightness7Icon from "@mui/icons-material/Brightness7";
 import {
   CssBaseline,
   ThemeProvider,
+  Tooltip,
   createTheme,
   useMediaQuery,
   useTheme,
@@ -17,21 +18,25 @@ export function ToggleThemeButton() {
   const theme = useTheme();
   const colorMode = React.useContext(ColorModeContext);
 
+  const altText = `Switch to ${
+    theme.palette.mode === "dark" ? "light" : "dark"
+  } mode`;
+
   return (
-    <IconButton
-      sx={{ m: 1 }}
-      onClick={colorMode.toggleColorMode}
-      color="inherit"
-      aria-label={`Switch to ${
-        theme.palette.mode === "dark" ? "light" : "dark"
-      } mode`}
-    >
-      {theme.palette.mode === "dark" ? (
-        <Brightness7Icon />
-      ) : (
-        <Brightness4Icon />
-      )}
-    </IconButton>
+    <Tooltip title={altText}>
+      <IconButton
+        sx={{ m: 1 }}
+        onClick={colorMode.toggleColorMode}
+        color="inherit"
+        aria-label={altText}
+      >
+        {theme.palette.mode === "dark" ? (
+          <Brightness7Icon />
+        ) : (
+          <Brightness4Icon />
+        )}
+      </IconButton>
+    </Tooltip>
   );
 }
 
@@ -57,6 +62,9 @@ export function SwitchableTheme(props: {
       createTheme({
         palette: {
           mode,
+          primary: {
+            main: "#D2AB67",
+          },
         },
       }),
     [mode]
