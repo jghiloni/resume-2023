@@ -36,7 +36,7 @@ jobs:
         with:
           node-version: "lts/*"
       - name: Install Dependencies
-        run: .yarn/releases/yarn-3.6.0.cjs install --immutable
+        run: .yarn/releases/yarn-3.6.0.cjs install
       - name: Build Website
         run: .yarn/releases/yarn-3.6.0.cjs build
       - name: Upload artifact
