@@ -18,22 +18,27 @@ export function ResumeContents() {
 
   const handleTabChange = (_: React.SyntheticEvent, newTabIndex: number) => {
     setTabIndex(newTabIndex);
-  }
+  };
 
   return (
-    <Box sx={{width: "100%"}}>
-      <Box sx={{borderBottom: 1, borderColor: "divider", padding: "0 50px"}}>
-        <Tabs value={tabIndex} onChange={handleTabChange} aria-label="Sections">
-          {
-            data.sections?.map((section, index) => (
-              <Tab label={section.name} {...a11yProps(index)} />
-            ))
-          }
+    <Box sx={{ width: "100%" }}>
+      <Box sx={{ borderBottom: 1, borderColor: "divider", padding: "0 50px" }}>
+        <Tabs
+          value={tabIndex}
+          onChange={handleTabChange}
+          aria-label="Sections"
+          variant="scrollable"
+          scrollButtons
+          allowScrollButtonsMobile
+        >
+          {data.sections?.map((section, index) => (
+            <Tab label={section.name} {...a11yProps(index)} />
+          ))}
         </Tabs>
       </Box>
-      {
-        data.sections?.map((section, index) => (<Section value={tabIndex} section={section} index={index} />))
-      }
+      {data.sections?.map((section, index) => (
+        <Section value={tabIndex} section={section} index={index} />
+      ))}
     </Box>
-  )
+  );
 }
