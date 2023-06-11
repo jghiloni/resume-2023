@@ -50,7 +50,7 @@ jobs:
           working_directory: tex
       - name: Copy PDF to upload
         run: >-
-          cp main.pdf ./build/resume.pdf
+          cp ./tex/resume.pdf ./build/resume.pdf
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
