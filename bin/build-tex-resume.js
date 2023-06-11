@@ -13,17 +13,29 @@ const resume = JSON.parse(resJSON);
 
 let texFileContents = `\\documentclass{res}
 \\usepackage{hyperref}
-\\setlength{\\textheight}{9.5in}
+\\usepackage{tabularx}
+\\usepackage{fancyhdr}
 
-\\newcommand\\textline[4][t]{%
-  \\par\\smallskip\\noindent\\parbox[#1]{.333\\textwidth}{\\raggedright\\textbf{#2}}%
-  \\parbox[#1]{.333\\textwidth}{\\centering#3}%
-  \\parbox[#1]{.333\\textwidth}{\\raggedleft#4}\\par\\smallskip%
-}
+\\setlength{\\textheight}{9in}
+
+\\newcommand\\textline[3]{%
+  \\par\\smallskip\\noindent%
+  \\parbox[t]{.35\\textwidth}{\\raggedright\\textbf{#1}}%
+  \\parbox[t]{.45\\textwidth}{\\centering{#2}}%
+  \\parbox[t]{.2\\textwidth}{\\raggedleft{#3}}%
+  \\par\\smallskip}
+
+\\newcolumntype{b}{X}
+\\newcolumntype{s}{>{\\hsize=.5\\hsize}X}
 
 \\begin{document}
+\\pagestyle{fancy}
+\\renewcommand{\\headrulewidth}{0pt}
+\\fancyhead{}
+\\fancyfoot{}
+\\fancyfoot[C]{\\thepage}
 
-\\name{${resume.name.toUpperCase()}\\\\[12pt]}
+\\name{\\href{https://www.joshghiloni.me}{${resume.name.toUpperCase()}}}
 \\address{\\href{mailto:${resume.email}}{${resume.email}}\\\\
 \\href{tel:+1${resume.phone}}{(${resume.phone.substr(
   0,
@@ -46,35 +58,34 @@ function renderStringish(hItem) {
   }
 }
 
-function renderSection(section) {
-  let sectionText = `\\section{${section.name.toUpperCase()}}`;
+function renderSection(section, addPageBreak = false) {
+  let sectionText = `\\${addPageBreak ? "pagebreak" : "medskip"}
+\\section{${section.name.toUpperCase()}}`;
   section.items.forEach((item) => {
     if (item.header) {
       sectionText = `${sectionText}
-    \\textline[t]{${renderStringish(item.header[0])}}{${renderStringish(
+\\goodbreak
+\\textline{${renderStringish(item.header[0])}}{${renderStringish(
         item.header[1]
       )}}{${renderStringish(item.header[2])}}`;
     }
 
     if (Array.isArray(item.body)) {
       sectionText = `${sectionText}
-
-      \\begin{table}[h!]
-        \\begin{center}
-          \\begin{tabular}{llrr}
-            \\hline
-            {\\bf Name} & {\\bf Experience} & {\\bf First Used} & {\\bf Last Used} \\\\
-            \\hline`;
+\\medskip
+\\begin{table}[htbp]
+  \\begin{tabularx}{\\linewidth}{bss}
+    {\\bf Name} & {\\bf Experience Level} & {\\bf Years of Experience} \\\\
+    \\hline`;
       item.body.forEach((skill) => {
         sectionText = `${sectionText}
-            ${skill.name} & ${skill.experience} & ${
-          skill.first_used
-        } & ${skill.last_used === 9999 ? "Currently Using" : skill.last_used} \\\\`;
+    ${skill.name} & ${skill.experience} & ${skill.first_used}—${
+          skill.last_used === 9999 ? "Present" : skill.last_used
+        } \\\\`;
       });
       sectionText = `${sectionText}
-          \\end{tabular}
-        \\end{center}
-      \\end{table}
+  \\end{tabularx}
+\\end{table}
       `;
     } else {
       if (item.body.variant) {
@@ -100,13 +111,13 @@ function renderSection(section) {
             break;
           case "list":
             sectionText = `${sectionText}
-    \\begin{itemize}`;
+\\begin{itemize}`;
             item.body.text.forEach((line) => {
               sectionText = `${sectionText}
-      \\item ${renderStringish(line)}`;
+  \\item ${renderStringish(line)}`;
             });
             sectionText = `${sectionText}
-    \\end{itemize}`;
+\\end{itemize}`;
             break;
           default:
             break;
@@ -118,15 +129,15 @@ function renderSection(section) {
   return sectionText;
 }
 
-resume.sections.forEach((section) => {
+resume.sections.forEach((section, idx) => {
   texFileContents = `${texFileContents}
 
-${renderSection(section)}`;
+${renderSection(section, (idx > 0 && (idx % 5 === 0)))}`;
 });
 
 texFileContents = `${texFileContents}
 
 \\end{resume}
-\\end{document}`
+\\end{document}`;
 
 fs.writeFileSync(path.join(texRoot, "resume.tex"), texFileContents);

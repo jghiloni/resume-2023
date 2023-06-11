@@ -61,7 +61,7 @@
         {
           "header": [
             "Staff Solutions Architect",
-            "VMware Tanzu Labs (formerly Pivotal Labs)",
+            "VMware Tanzu/Pivotal Labs",
             "2017 - 2022"
           ],
           "body": {
@@ -162,7 +162,7 @@
               "name": "Helm",
               "first_used": 2019,
               "last_used": 9999,
-              "experience": "Advanced"
+              "experience": "Expert"
             },
             {
               "name": "React.js",

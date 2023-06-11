@@ -41,6 +41,16 @@ jobs:
         run: yarn install
       - name: Build Website
         run: yarn build
+      - name: Build resume.tex
+        run: yarn build-tex
+      - name: Github Action for LaTeX
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: resume.tex
+          working_directory: tex
+      - name: Copy PDF to upload
+        run: >-
+          cp main.pdf ./build/resume.pdf
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
