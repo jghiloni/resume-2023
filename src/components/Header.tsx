@@ -81,6 +81,12 @@ export function Header() {
     </Button>
   );
 
+  const DownloadButton = (sx = {}) => (
+    <IconButton href="/resume.pdf" aria-label="Download as PDF" target="_blank" rel="noopener">
+      <DescriptionRoundedIcon fontSize="large" htmlColor="white" />
+    </IconButton>
+  )
+
   const contactLinks = [
     { key: "phone", link: phoneLink },
     { key: "email", link: emailLink },
@@ -128,7 +134,7 @@ export function Header() {
                 ))}
               </Menu>
             </Box>
-            <DescriptionRoundedIcon fontSize="large" htmlColor="white" />
+            <DownloadButton />
             <Typography variant="h5" ml="12px" mr="36px" color="white" noWrap>Josh Ghiloni, Principal Software Engineer</Typography>
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               {contactLinks.map(({ link }) => link({ my: 2, color: 'white' }))}

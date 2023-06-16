@@ -27,7 +27,7 @@
               "href": "https://realtor.com",
               "text": "realtor.com"
             },
-            "2022 - Present"
+            "2022—Present"
           ],
           "body": {
             "variant": "list",
@@ -45,7 +45,7 @@
           "header": [
             "Founder and Sole Proprietor",
             "Ghiloni Ideaworx",
-            "2022 - Present"
+            "2022—Present"
           ],
           "body": {
             "variant": "paragraph",
@@ -62,7 +62,7 @@
           "header": [
             "Staff Solutions Architect",
             "VMware Tanzu/Pivotal Labs",
-            "2017 - 2022"
+            "2017—2022"
           ],
           "body": {
             "variant": "list",
@@ -77,20 +77,20 @@
           "header": [
             "Principal Consultant",
             "ECS Team (now part of CGI)",
-            "2012 - 2017"
+            "2012—2017"
           ],
           "body": {
             "variant": "list",
             "text": [
               "Member of a boutique consulting firm based in Denver, CO, acquired by CGI in 2017",
-              "Lead technical architect for Connect for Health Colorado, Colorado's implementation of the Affordable Care Act's Healthcare Exchange. We had the distinction of being the only state whose exchange did not crash on day 1. Developed highly available infrastructure based on Oracle's SOA Stack, and custom solutions to provide EDI transfer between the exchange and insurance providers, from 2012 - 2014",
+              "Lead technical architect for Connect for Health Colorado, Colorado's implementation of the Affordable Care Act's Healthcare Exchange. We had the distinction of being the only state whose exchange did not crash on day 1. Developed highly available infrastructure based on Oracle's SOA Stack, and custom solutions to provide EDI transfer between the exchange and insurance providers, from 2012—2014",
               "Acted as an Enterprise Architect with DigitalGlobe (now Maxar), helping modernize their software stack powering the ground systems for their WorldView 4 satellite. Implemented a polyglot app-to-app authentication and authorization system using OAuth 2 for apps deployed to Cloud Foundry (both open source and Pivotal-branded variants)",
               "Participated in Pivotal Cloud Foundry Solutions engagements as a Pivotal Ready Partner (see above for an in-depth description)"
             ]
           }
         },
         {
-          "header": ["Advisory Software Engineer", "IBM", "2003 - 2012"],
+          "header": ["Advisory Software Engineer", "IBM", "2003—2012"],
           "body": {
             "variant": "list",
             "text": [
@@ -120,16 +120,16 @@
               "experience": "Expert"
             },
             {
-              "name": "Java",
-              "first_used": 2003,
-              "last_used": 9999,
-              "experience": "Advanced"
-            },
-            {
               "name": "Bash",
               "first_used": 1999,
               "last_used": 9999,
               "experience": "Expert"
+            },
+            {
+              "name": "Java",
+              "first_used": 2003,
+              "last_used": 9999,
+              "experience": "Advanced"
             },
             {
               "name": "Python",

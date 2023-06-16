@@ -45,8 +45,18 @@ export function Section(props: {
                 alignItems="flex-start"
                 justifyContent="space-between"
               >
-                {item.header.map((hi) => (
-                  <Typography variant="h6">{RenderStringish(hi)}</Typography>
+                {item.header.map((hi, idx) => (
+                  <Typography
+                    variant="overline"
+                    sx={{
+                      textAlign:
+                        idx === (item.header ?? []).length - 1
+                          ? "right"
+                          : "left",
+                    }}
+                  >
+                    {RenderStringish(hi)}
+                  </Typography>
                 ))}
               </Stack>
             </Paper>

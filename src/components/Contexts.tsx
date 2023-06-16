@@ -66,6 +66,11 @@ export function SwitchableTheme(props: {
             main: "#D2AB67",
           },
         },
+        typography: {
+          overline: {
+            fontSize: 14,
+          }
+        }
       }),
     [mode]
   );
