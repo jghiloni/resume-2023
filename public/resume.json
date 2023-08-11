@@ -18,6 +18,26 @@
       ]
     },
     {
+      "name": "Education",
+      "items": [
+        {
+          "header": [
+            "Case Western Reserve University",
+            "Bachelor of Science, Computer Science",
+            "1999—2003"
+          ],
+          "body": {
+            "variant": "list",
+            "text": [
+              "Courses focused on theoretical computer science, hybrid systems, autonomous robotics",
+              "Broad focus on humanities and liberal arts, with extensive coursework in German and music",
+              "Activities: Phi Kappa Theta fraternity, Case Men's Glee Club, Symphonic and Jazz Bands, Pit orchestra for multiple student-produced musicals"
+            ]
+          }
+        }
+      ]
+    },
+    {
       "name": "Experience",
       "items": [
         {
@@ -37,7 +57,8 @@
               "Assisted a team from a recent acquisition in migrating their site onto realtor.com infrastructure. This included writing a super-low-latency router, redirecting approximately 30,000 URLs to the new format in sub-20ms time using AWS CloudFront and DynamoDB",
               "As teams migrated from Jenkins-based CI/CD and native AWS-based infrastructure to cloud-native CI/CD with CircleCI and ArgoCD and Kubernetes-based infrastructure, I assisted many teams, including my own, with the transition, using my extensive experience with Kubernetes and CI/CD solutions",
               "Migrated many internal tools from bespoke, tightly coupled interfaces to more generic, cloud-native solutions",
-              "Mentored my team of young engineers on cloud-native and enterprise software patterns, as well as how to navigate the internal politics of a medium-sized enterprise which was, for most of them, their first full-time job"
+              "Mentored my team of young engineers on cloud-native and enterprise software patterns, as well as how to navigate the internal politics of a medium-sized enterprise which was, for most of them, their first full-time job",
+              "As part of the Quality Ops Leadership Team, I introduced new technologies and brought an engineer's perspective to a team mostly consisting of non-technical managers"
             ]
           }
         },
